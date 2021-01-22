@@ -1,0 +1,829 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #544837;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.title{
+color: #2F281E;
+}
+
+.container {
+max-width: 1124px;
+margin: 0 auto;
+padding: 0 10px;
+/*паддинг(внутренний отступ обычно 10 или 15 
+чтобы текст не прилипал к углу монитора*/
+}
+
+.header__inner{
+display: flex;
+/*display: flex для того чтобы разместить  горизонтально дочерние
+блоки меню и кнопки панели навигации (ранее они были списком)*/
+justify-content: space-between;
+/*выравниваем очерние
+блоки меню и кнопки панели навигации */
+align-items: center;
+height:78px ;
+}
+
+.menu{
+    margin-left: auto;
+}
+
+.menu__list{
+display: flex;
+}
+
+.menu__list-item+.menu__list-item{
+    margin-left: 24px;
+}
+
+.menu__list-link{
+    color: #2F281E;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400px;
+    text-decoration: none;
+    }
+
+/*text-decoration: none- исключает маркеры списка*/
+.user-nav{
+margin-left: 52px;
+margin-right: 13px;
+}
+
+.user-nav__link{
+    color: #173A56;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 11px 23px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.user-nav__link+.user-nav__link{
+    margin-left: 14px;
+    border-color:transparent;
+    background: #FF9900;
+    color:#fff
+}
+
+
+
+
+
+
+
+.top__inner{
+    padding: 133px 0 80px;
+    background-image: url('../images/top-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+
+}
+
+.top__title{
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 54px;
+    margin-bottom: 30px;
+    max-width: 518px;
+}
+
+.top__text{
+font-weight: 400px;
+font-size: 18px;
+line-height: 28px;
+margin-bottom:45px;
+max-width: 460px;
+}
+
+.top__btn{
+display: inline-block;
+font-weight: 700px;
+color: #fff;
+background: #FF9900;
+border-radius:4px;
+padding: 15px 41px 14px;
+margin-right: 30px;
+border: none;
+}
+
+.top__link{
+line-height: 24px;
+display: inline-block;
+font-weight: 600px;
+color: #FF9900;
+padding-left: 25px;
+position: relative;
+}
+
+.top__link::before{
+content:"";
+position: absolute;
+left: 0;
+width: 17px;
+height: 19px;
+top:2px;
+background-image: url('../images/play-icon.svg');
+}
+
+/*День второй*/
+
+.tools{
+padding-top: 110px;
+/*внутренний отступ от ноги девушки до заголовка 
+h3 "tools__title title"*/
+}
+
+.tools__title {
+text-align: center;
+max-width: 539px;
+/*max-width: 539px-ширина заголовка из фигмы*/
+margin: 0 auto 46px;
+/*margin:0-ноль сверху; auto-слева и справа одинаковые отступы
+46-это отступ снизу до иконок tools-1..4*/
+font-size: 36px;
+line-height: 54px;
+font-weight: 700;
+padding: 0 10px;
+/*0-сверху и снизу, 10 -по бокам, чтобы
+ текст не прилипал к углу монитора*/
+}
+
+
+.tools__inner{
+padding-bottom: 90px;
+background-image: url('../images/tools-bg.svg');
+background: no-repeat;
+background-position: center bottom;
+background-size: cover;
+}
+
+ 
+
+
+.tools__items{
+display: flex;
+/*display: flex для того чтобы разместить горизонтально дочерние
+блоки tools__item (ранее они были списком)*/
+justify-content:space-between ;
+/*выравниваем контент*/
+padding: 8px 16px 0;
+/*8px-расстояние от верха родителя до иконки дочернего
+tools__item; 16рх-расстояние слева от первой иконки до границы блока*/
+margin-bottom: 60px;
+/*60px-расстояние снизу от блока до кнопки SIGN UP NOW*/
+}
+
+.tools__item{
+width: 240px;
+}
+
+.tools__item-img{
+margin-bottom: 30px;
+/*расстояние от иконок снизу до заголовков подписей*/
+
+}
+
+.tools__item-title{
+    /*работаем с заголовками подписей*/
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 600;
+    margin-bottom: 13px;
+    /*расстояния от заголовка подписи до текста*/
+}
+
+
+.tools__link{
+/*расписываем кнопку/ссылку SIGN UP NOW*/
+background-color: #ff9900;
+display: block;
+padding: 15px 32px 14px;
+border-radius: 4px;
+font-weight: 700;
+line-height: 24px;
+color:#fff ;
+text-decoration: none;
+width: 173px;
+/*173рх-задали ширину кнопки*/
+margin: 0 auto;
+/*выровняли по центру-сверху и снизу отступов нет, 
+слева и справа они максимальны*/
+}
+
+
+/*_____________________________________________*/
+/*!!!!!!делаем новую section с классом durection*/
+.direction{
+padding: 120px 0 100px;
+/*паддинг-отступ сверху 120, по бокам-0, снизу-100*/
+}
+
+/*далее верстаем первый и третий дивы, т.к. им 
+задали аналогичные классы. 
+Ряд этих же классов будет актуален для второго дива*/
+.direction__item{
+display: flex;
+justify-content: space-between;
+/*блок с классом direction__item-content (текстовая часть) и картинка
+с классом direction__item-img из вертикального положения 
+принимают горизонтальное ивыравниваются space-between*/
+margin-bottom: 100px;
+/*100рх приняли отступ до секции team*/
+}
+
+/*далее верстаем текст внутри direction__item-content.-актуально 
+для первого и третьего дивов*/
+.direction__item-content{
+max-width: 486px;
+/*текстовая часть всех абзацев равно 486-см.фигму*/
+}
+
+.direction__item-pretitle{
+margin-bottom: 3px;
+/*Актуально для первого и третьего дивов:
+3рх-отступ снизу до заголовка Design Professionals*/
+}
+
+.direction__item-title{
+ /*Актуально для первого и третьего дивов:
+ обрати внимание что класс у заголовка в html коде 
+ direction__item-title title, т.е. опуская одно слово 
+ title получаем тем не менее рабочий вариант*/   
+font-size: 36px;
+line-height: 54px;
+font-weight: 700;
+margin-bottom: 22px;
+/*22рх-отступ снизу до зтекста The Myspace page....*/
+}
+
+.direction__item-subtitle{
+/*Актуально для первого и третьего дивов:
+обрати внимание что класс у заголовка в html коде 
+ direction__item-subtitle title, т.е. опуская одно слово 
+ title получаем тем не менее рабочий вариант*/
+font-weight: 700;
+margin-bottom: 12px;
+/*12рх-отступ снизу до зтекста While most people....*/
+}
+
+.direction__item-titletext{
+margin-bottom: 30px;
+/*Актуально для первого и третьего дивов*/
+}
+
+.direction__item-text{
+margin-bottom: 25px;
+/*Актуально для первого и третьего дивов*/
+}
+
+
+
+
+/*верстаем текст для списка во втором диве*/
+/*сначала убираем точки из маркеров списка, т.к. вместо
+них будут картинки (в качестве альтернативы можно сипользовать
+св-во list-style:img-и вместо маркеров будут картики, 
+но ими никак нельзя управлять)
+*/
+.direction__list{
+list-style: none;
+}
+
+
+.direction__list-item{
+margin-bottom: 30px;
+/*30-межстрочный интервал*/
+padding-left: 65px;
+/*65-расстояние от текста до левой границы маркера списка,
+т.е. мы таким образом резервируем место под маркер*/
+position: relative;
+/*ставим лист айтем на псевдоэлемент*/
+}
+
+.direction__list-item::before{
+/*Выполняем псевдоэлемент-так мы задаем картинки
+в качестве маркеров списка-в html коде ссылку на картину
+не прописываем! Задаем ее только через css свойства*/
+content: "";
+position: absolute;
+top: 9px;
+/*9-поднимаем картинку маркера списка вверх*/
+left: 0;
+/*0-прижимаем картинку к левому краю*/
+width: 35px;
+height: 35px;
+/*35/35-высота и ширина картинки маркера списка*/
+background-image: url('../images/chek.svg');
+}
+
+
+
+/*_____________________________________________*/
+/*задаем секции team css свойства*/
+.team{
+background-image: url(../images/team-bg.svg);
+/*задаем фон секции team в виде бежевого овала*/
+background-repeat: no-repeat;
+background-position: top center;
+background-size: cover;
+}
+
+
+.team__inner{
+padding: 230px 0 380px;
+/*230-отступ от блока с надписью 
+"Need a super hero" вверх (до начала
+фоно-овала, 380-вниз*/
+position: relative;
+/*относительно тим иннер будет выстраиваться 
+все позиционирования картинок с надписями,т.е.
+
+<div class="team__item + модификатор> в количесве 6-ти штук (в каждую 
+входит картинка (ссылка img) и 
+абзац с надписью <p class="team__item-text+ модификатор>  
+мы для позиционирования задаем position: absolut. После абзацу с 
+надписью <p class="team__item-text+ модификатор> , 
+который уже входит в вышеуказанный еще раз задаем position: absolut*/
+}
+
+.team__box{
+text-align: center;
+max-width: 542px;
+margin: 0 auto;
+/*чтобы поставить блок по центру*/
+}
+
+.team__title{
+font-size: 36px;
+line-height: 54px;
+font-weight: 700;
+margin-bottom: 22px;
+
+}
+
+.team__text{
+color: #567592;
+margin-bottom: 45px;
+/*до кнопки*/
+}
+
+.team__btn{
+background-color: #ff9900;
+border: none;
+border-radius: 4px;
+padding: 15px 30px 14px;
+/*15-сверху,30-слева и справа,14-снизу*/
+color: #fff;
+}
+
+.team__item{
+position: absolute;
+width: 98px;
+height: 98px;
+/*высоту и ширину текста задаем аналогично
+размерам фото, чтобы текстом было удобно управлять*/
+
+}
+
+
+/*работаем с модификаторами team__item--1..5*/
+.team__item--1{
+right: 95px;
+top: 157px;
+/*смещаем негра на 95 вправо и 157 вниз*/
+}
+
+.team__item--2{
+left: 0;
+/*left т.к.item-text--left в html коде*/
+top: 223px;
+}
+
+.team__item--3{
+bottom: 257px;
+right: 0;
+}
+
+.team__item--4{
+bottom: 223px;
+left: 210px;
+}
+
+.team__item--5{
+right: 300px;
+bottom: 135px;
+}
+
+
+
+
+
+
+
+
+
+.team__item-img{
+width: 98px;
+height: 98px;
+/*98,98-задаем высоту и ширину картинки*/
+border-radius: 50%;
+/*бордером обрезаем края,
+картинку делаем из квадратной круглую*/
+overflow: hidden;
+/*не видно обрезанных краев*/
+object-fit: cover;
+/*'посмотри комментарий на 2:2:15 минуте-это аналог св-ва backgrond-size:cover. 
+Мало ли кто-нибудь захочет засунуть сюда картинку больше или меньше,
+ cover автоматически подстроит ее пропорционально под высоту 
+ и ширину 98пикс.*/
+}
+
+.team__item-text{
+background-color: #fff;
+padding: 14px 20px 15px;
+color: #2F281E;
+box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+border-radius: 26px;
+/*'далее двигаем надпись относительно картинки'*/
+position: absolute;
+top: -30px;
+right: 75px;
+white-space: nowrap;
+/*чтобы текст не переносился*/
+}
+
+
+.team__item-text.team__item-text--left{
+/*когда мы пишем слитно без пробела это
+означает что рассматриваем случай когда в одном теге есть 
+одновременно 2 класса-это необходимо,
+чтобы отдельно поработать с item--2 т.к. текст у него
+в другом направлении  см. видео на 2:45:00*/
+/*перебиваем райт*/
+left:62px
+}
+
+/*рисуем белые кружки на фото через псевдоэлементы*/
+.team__item-text--ridht::after,
+.team__item-text--ridht::before,
+.team__item-text--left::before,
+.team__item-text--left::after{
+/*item-text--left будет смещать зеркально белые
+кружки для второй картинки (см.HTML код)*/
+content:"";
+position: absolute;
+background-color: #fff;
+border-radius: 50%;
+/*бордер радиус нужен чтобы из квадратов сделать
+кружки-здесь он задается одновременно для
+малого и большого круга*/
+}
+
+/*рисуем большой кружок для item-text--ridht*/
+.team__item-text--ridht::after{
+width: 17px;
+height: 17px;
+bottom: -7px;
+right: 30px;
+/*боттом и райт-двигаем кружок как нам надо*/
+}
+
+/*рисуем малый кружок для item-text--ridht*/
+.team__item-text--ridht::before{
+width: 9px;
+height: 9px;
+bottom: -20px;
+right: 9px;
+/*боттом и райт-двигаем кружок как нам надо*/
+}
+
+/*рисуем малый кружок для item-text--left*/
+.team__item-text--left::before{
+    width: 9px;
+    height: 9px;
+    bottom: -20px;
+    left: 9px;
+    /*боттом и райт-двигаем кружок как нам надо*/
+    }
+
+
+/*рисуем большой кружок для item-text--left*/
+.team__item-text--left::after{
+    width: 17px;
+    height: 17px;
+    bottom: -7px;
+    left: 30px;
+    /*боттом и райт-двигаем кружок как нам надо*/
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /*День третий*/
+/*Сначала задаем оступы для секции blog*/
+.blog{
+padding: 30px 0 120px;    
+}
+
+.blog__title{
+font-size: 34px;
+line-height: 51px;
+font-weight: 700;
+margin-bottom: 9px;
+/*margin-top писать не стал т.к. выше задал паддинг 30рх*/
+}
+
+.blog__text{
+margin-bottom: 55px;
+/*отступ от текста снизу до слайдера*/
+}
+
+/*работаем с точками слайдера-
+см. комментарий на 36-37 минуте*/
+
+.slider{
+/*см.клмментарий на 36-37 минуте*/
+margin: 0 -20px;    
+ }
+
+.slider__item{
+/*см.клмментарий на 36-37 минуте*/
+padding: 0 20px;
+}
+
+.slider__item-img{
+width: 348px;
+height: 185px;
+object-fit: cover;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+margin-bottom: 25px;
+}
+
+
+.slider_item-info{
+margin-bottom: 12px;
+line-height: 28px;
+}
+
+.slider_item-autor{
+text-decoration: none;   
+font-weight: 700;
+color: #544837;
+}
+
+.slider__item-title{
+text-decoration: none;
+font-size: 24px;
+line-height: 34px;
+font-weight: 700;
+/*прописываем замедление 0,3 сек. на изменение цвета с 
+черного на оранжевый через транзитион*/
+transition: all .3s;
+/*через марджин выполняем отступ до элементов прокрутки*/
+margin-bottom: 84px;
+/*задаем инлайн блок, т.к. марджин со строчным
+элементов не работает*/
+display: inline-block;
+}
+
+/*при наведении на текст слайдера делаем изменение
+черного цвета на оранжевый через ховер*/
+.slider__item-title:hover{
+color: #ff9900;
+}
+
+/*работаем с ссписком, кот. отображается только в браузере через
+код разработчика*/
+.slick-dots{
+/*убираем маркеры списка*/  
+list-style: none;
+display: flex;
+justify-content: center;
+}
+
+/*изменяем маркеры (цифры на кружки) в списке прокрутки
+котор.отображается только в браузере(там. см.его класс)*/
+
+.slick-dots button{
+/*т.е. обращаемся ко всем батонам кот. в списке слик дотс*/
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: none;
+/*через фонт сайз убиваем цифры списка*/
+font-size: 0;
+background-color: #efefef;
+padding: 0;
+margin: 0 5px;
+}
+
+/*делаем активным оранжевый круг списка*/
+.slick-dots .slick-active button{
+background-color: #ff9900;
+}
+
+/*_______________________________*/
+/*Делаем футер*/
+
+.footer__inner{
+/*устанавливаем паддинг от логотипа вверх,
+и от кнопки Sign up Now вниз-паддинги задаем
+футер иннеру т.к. синяя линияя за пределы контейнера 
+не выходит. Если б линии не было падинги  
+задавали только футеру*/
+padding: 105px 0 100px;
+border-top: 1px solid rgba(188, 208, 229, 0.496913);
+/*прописываем синюю линию*/
+
+/*распределяем содержимое обертки иннер
+из вертиколи в горизонталь черех флекс*/
+display: flex;
+justify-content: space-between;
+}
+
+
+.footer__menu{
+/*прописываем ширину для обеих списков*/
+width: 135px;
+}
+
+.footer__menu-title,
+.footer__form-text{
+/*задаем отступ от заголовка до списка, а
+после запятой-от текста knowing you're always
+до ячейки с вводом телефона*/
+margin-bottom: 35px;
+/*далее параметры текста*/
+font-size: 20px;
+line-height: 30px;
+color: #2F281E;
+}
+
+/*далее работаем со списками*/
+
+.footer__list{
+list-style: none;
+}
+
+.footer__menu-link{
+font-size: 16px;
+line-height: 35px;
+color: #544837;
+text-decoration: none;
+}
+
+/*после спиcков пилим футер форм*/
+.footer__form{
+width: 330px;
+}
+
+/*пилим рамку для ввода телефона*/
+.footer__form-input{
+height: 48px;
+padding: 0 15px;
+border: 1px solid #BCD0E5;
+box-sizing: border-box;
+border-radius: 4px;
+width: 100%;
+margin-bottom: 21px;
+display: inline-block;
+}
+
+/*задаем цвет плайсхолдеру для ввода телефона
+ через псевдоэлемент*/
+.footer__form-input::placeholder{
+    color: #BCD0E5;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/*расписываем кнопку Sign up Now */
+.footer__form-btn{
+background-color: #FF9900;
+background-repeat: 4px;
+color: #fff;
+padding: 8px 15px 7px;
+border: none;
+font-weight: 700;
+}
+
+
+
+
+/*ниже привожу вариант адаптива*
+ после вставки:
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ в тег head
+
+ необходимо сделать медиазапрос(это второй шаг)!
+ Медиазапрос делается в конце css свойства, 
+ чтобы он перекрывал все теги. В крайнем случае он должен
+ быть ниже css свойств тега к которому он обращен!
+ Иначе работать не будет, т.к. не будет переопределения!
+
+ Пример 1:
+
+ @media (max-width:800px){
+body{
+    background-color: #000;
+ }
+
+т.е. при уменьшении экрана ниже 800рх
+цвет фона автоматически стане черным
+
+ Пример 2:
+
+ @media (min-width:800px){
+body{
+    background-color: #000;
+ }
+
+т.е. при увеличении экрана выше 800рх
+цвет фона автоматически стане черным
+
+____________________________
+
+Т.к. 99% дизанеров делают свои макеты под 
+desctop версии, мы их адаптируем под mobile версии,
+поэтому руководствуемся примером №1 "..max-width..", те.
+при уменьшении экрана задаем свойства всем необходимым 
+тегам, чтобы надписи не уезжали друг на друга. 
+Т.е все должно переопределяться и в первую очередь шрифты!*/
+
+
+
+/*-Создаем кнопку вызова menu__btn меню 
+(через спан) для адаптива к 
+мобильной версии(css прописаны в конце стилей)*/
+.menu__btn{
+width: 40px;
+height: 30px;
+display: none;
+}
+/*-background-color:red--удалем*/
+
+
+.menu__btn span{
+display: block;
+height: 2px;
+width: 100%;
+background-color: #000;
+position: absolute;
+left: 0;
+top:14px
+}
+/*-span это будет одна черная линия в центре
+прямоугольника*/
+
+
+/*-дале рисуем такие же линии сверху и снизу*/
+.menu__btn::after,
+.menu__btn::before{
+content:"";
+position: absolute;
+width: 40px;
+height: 2px;
+border-color: #000;
+left:0;
+}
+
+
+.menu__btn::before{
+top:0;
+}
+
+
+.menu__btn::after{
+bottom:0;
+}
+/*-!!!по итогу их не вышло-вероятно одни стили
+перебивают другие!!!!*/
