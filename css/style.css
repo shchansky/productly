@@ -26,14 +26,12 @@ color: #2F281E;
 max-width: 1124px;
 margin: 0 auto;
 padding: 0 10px;
-/*паддинг(внутренний отступ обычно 10 или 15 
-чтобы текст не прилипал к углу монитора*/
+
 }
 
 .header__inner{
 display: flex;
-/*display: flex для того чтобы разместить  горизонтально дочерние
-блоки меню и кнопки панели навигации (ранее они были списком)*/
+
 justify-content: space-between;
 /*выравниваем очерние
 блоки меню и кнопки панели навигации */
@@ -588,6 +586,12 @@ border-top-right-radius: 8px;
 margin-bottom: 25px;
 }
 
+/*см.выше: object-fit: cover- для того чтобы картика встраивалась 
+в заданную ширину и высоту
+(по аналогии с бэкграунд имайдж и сайз),
+border-top-left-radius и border-top-right-radius- 
+служат для скругления верхних углов*/
+
 
 .slider_item-info{
 margin-bottom: 12px;
@@ -634,19 +638,23 @@ justify-content: center;
 котор.отображается только в браузере(там. см.его класс)*/
 
 .slick-dots button{
-/*т.е. обращаемся ко всем батонам кот. в списке слик дотс*/
+/*т.е. пробел-это вложенность, мы обращаемся ко всем батонам кот. в списке слик дотс*/
 width: 16px;
 height: 16px;
 border-radius: 50%;
 border: none;
-/*через фонт сайз убиваем цифры списка*/
+/*через фонт сайз ноль убиваем цифры списка*/
 font-size: 0;
 background-color: #efefef;
 padding: 0;
 margin: 0 5px;
 }
 
-/*делаем активным оранжевый круг списка*/
+/*делаем активным оранжевый круг списка
+Пробелы в css свойтсве означают вложенность: т.е.
+все теги баттон которые находятся в классе .slick-active,
+а класс .slick-active находятся в классе .slick-dots
+*/
 .slick-dots .slick-active button{
 background-color: #ff9900;
 }
@@ -814,6 +822,7 @@ width: 40px;
 height: 2px;
 border-color: #000;
 left:0;
+background-color:#000;
 }
 
 

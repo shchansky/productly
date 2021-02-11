@@ -1,44 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--'эта строка с мета тегом вьюпорт д.б. для адапитива прежде всего,
-    любой адаптив начинается всегда с этой строки
-  content="width=device-width- т.е. ширина внутреннего контента сайта 
-  будет определяться исходя из ширины моего монитора. Это означает можно ли масштабировать сайт.
-
-viewport это метатег, в котором есть атрибут content="width=device-width-т.е. ширина контента
-должна быть равна ширине девайса монитора. Это надо для масштабирования сайта.
-
-initial-scale=1.0---- посмотри в справочнике вьюпорт
-
-!!!!2й-шаг любого адатива-надо сделать медиазапрос!!!!!!!
-Смотри его описание в конце стилей css кода,но реализовывать его будем в отдельной папке-см.последний
-link rel-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
-  <!--css/slick.css для работы слайдера*-->
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <!--После   link rel="stylesheet" href="css/style.css
-    ничего не должно ничего быть кроме файла media.css - ниже мы его создаем"
-  Все медиазапросы мы будем писать на яве в файле css/style.css-->
-
   <link rel="stylesheet" href="css/media.css">
-
 </head>
 
 <body>
-
-
-
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -47,18 +24,14 @@ link rel-->
         </a>
 
         <nav class="menu">
-          <!--Создаем кнопку вызова menu__btn меню (через спан) для адаптива к 
-  мобильной версии(css прописаны в конце стилей)-->
           <div class="menu__btn">
             <span></span>
           </div>
-
-          <!--Создаем список меню-->
           <ul class="menu__list">
             <li class="menu__list-item">
               <a class="menu__list-link" href="#">Product</a>
             </li>
-            <li class="menu__list-item"> 
+            <li class="menu__list-item">
               <a class="menu__list-link" href="#">Customers</a>
             </li>
             <li class="menu__list-item">
@@ -69,16 +42,14 @@ link rel-->
             </li>
           </ul>
         </nav>
-
+        
         <div class="user-nav">
           <a class="user-nav__link" href="#">Sign In</a>
           <a class="user-nav__link" href="#">Sign Up</a>
         </div>
-
       </div>
     </div>
   </header>
-
 
   <section class="top">
     <div class="container">
@@ -95,9 +66,6 @@ link rel-->
       </div>
     </div>
   </section>
-
-
-
 
   <section class="tools">
     <h3 class="tools__title title">We design tools to unveil your superpowers</h3>
@@ -139,18 +107,9 @@ link rel-->
   </section>
 
 
-  <!--_______________________________________________________-->
-  <!--делаем новую секцию с классом durection. В эту секцию вставляеи контейнер container. В контейнере будет три дива с
-      классом direction item (см.картинку в фигме)- в первый див войдет design professional со свой картинкой, во второй
-      див product manager со своей картинкой, в третий див marceter со своей картинкой. Каждая direction item будет
-      состять из direction item content (в нее блоками пишем текст контента)+ картинки img. То что ниже реализовано
-      можно также сделать через списки-->
   <section class="direction">
     <div class="container">
-
-      <!--Делаем первый див с картинкой Design Professionals-он аналогичен в оформлении также 3-му диву-->
       <div class="direction__item">
-        <!--заполняем текстовую часть контента-->
         <div class="direction__item-content">
           <p class="direction__item-pretitle">Effortless Validation for</p>
           <h3 class="direction__item-title title">Design Professionals</h3>
@@ -167,25 +126,16 @@ link rel-->
           <p class="direction__item-text">If you are looking for a new way to promote your business<br>
             that won’t cost you more money</p>
         </div>
-        <!--вставляем картинку дизайн профессионала-->
         <img class="direction__item-img" src="images/direction-1.svg" alt="Design Professionals">
       </div>
-
-
-
-      <!--Делаем второй див с картинкой Product Managers (он отличен от первого и третьего дивов)-->
-      <div class="direction__item">
-        <!--Обрати внимание, картинку продукт менеджера мы вставляем перед текстовой частью контенета-чтобы при
-                  выравнивании display: flex она оказалась слева-->
+       <div class="direction__item">
         <img class="direction__item-img" src="images/direction-2.svg" alt="Product Managers">
-        <!--заполняем текстовую часть контента-->
         <div class="direction__item-content">
           <p class="direction__item-pretitle">Easier decision making for</p>
           <h3 class="direction__item-title title">Product Managers</h3>
           <p class="direction__item-titletext">The Myspace page defines the individual, his or her characteristics,
             traits, personal choices and the overall personality of the person </p>
-          <!--далее в во втором диве удаляем все заголовки h6 и абзацы р -вместо них делаем список-->
-          <ul class="direction__list">
+                    <ul class="direction__list">
             <li class="direction__list-item">
               Never worry about overpaying for your energy again.
             </li>
@@ -198,14 +148,8 @@ link rel-->
           </ul>
         </div>
       </div>
-
-
-
-
-      <!--Делаем третий див с картинкой Marketers(он аналогичен по оформлению первому диву)-->
-      <div class="direction__item">
-        <!--заполняем текстовую часть контента-->
-        <div class="direction__item-content">
+          <div class="direction__item">
+              <div class="direction__item-content">
           <p class="direction__item-pretitle">Optimisation for</p>
           <h3 class="direction__item-title title">Marketers</h3>
           <p class="direction__item-titletext">Few would argue that, despite the advancements of<br>
@@ -221,24 +165,15 @@ link rel-->
           <p class="direction__item-text">If you are looking for a new way to promote your business<br>
             that won’t cost you more money</p>
         </div>
-        <!--вставляем картинку маркетера-->
         <img class="direction__item-img" src="images/direction-3.svg" alt="Marketers">
       </div>
     </div>
   </section>
 
-  <!--_______________________________________________________-->
-  <!--делаем секцию team с классом durection.-->
   <section class="team">
-    <!--cразу же после секции делаем класс контейнер.-->
     <div class="container">
-      <!--внутрь контейнера вкладываем обертку team__inner-->
-      <div class="team__inner">
-        <!--внутрь team__inner вкладываем team__item_1..5 с пятью фото и подписями-->
-
-        <div class="team__item team__item--1">
-          <!--внутрь каждой team__item вкладываем фото с подписью.Обрати внимание что team__item--1...5
-                          являются модификаторами-->
+       <div class="team__inner">
+         <div class="team__item team__item--1">
           <img class="team__item-img" src="images/team-1.jpg" alt="name">
           <p class="team__item-text team__item-text--ridht">I can help marketing strategy</p>
         </div>
@@ -258,15 +193,11 @@ link rel-->
           <img class="team__item-img" src="images/team-5.jpg" alt="name">
           <p class="team__item-text team__item-text--ridht">I will define the profile of your users</p>
         </div>
-
-        <!--внутрь team__inner также вкладываем team__box с заголовком,текстом и кнопкой-->
         <div class="team__box">
           <h3 class="team__title title">Need a super hero?</h3>
           <p class="team__text">Do you require some help for your project: Conception workshop, prototyping, marketing
             strategy, landing page, Ux/UI?
           </p>
-          <!--кнопку Contact our expert можно сделать ссылкой или попапом. Для разнообразия делаем
-                            попапом-->
           <button class="team__btn">
             Contact our expert
           </button>
@@ -275,26 +206,11 @@ link rel-->
     </div>
   </section>
 
-
-
-
-
-
-  <!--_______________________________________________________-->
-  <!--День третий-->
-
-
   <section class="blog">
-
     <div class="container">
       <h3 class="blog__title title">Marketing Strategies</h3>
       <p class="blog__text">Join 40,000+ other marketers and get proven strategies on email marketing</p>
-
-      <!--пилим слайдер в составе контейнера!-->
       <div class="slider">
-        <!--внутри этот слайдер будет делится на 3 слайдер айтема!. 
-                      Подписи под картинками делаем ссылками-->
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-1.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -303,9 +219,6 @@ link rel-->
           <a class="slider__item-title title" href="#">Increasing Prosperity<br> With Positive
             Thinking</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-2.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -313,9 +226,6 @@ link rel-->
           </div>
           <a class="slider__item-title title" href="#">Motivation Is The First<br> Step To Success</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-3.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -324,13 +234,6 @@ link rel-->
           <a class="slider__item-title title" href="#">Success Steps For Your<br> Personal Or
             Business<br> Life</a>
         </div>
-
-
-
-
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-1.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -339,9 +242,6 @@ link rel-->
           <a class="slider__item-title title" href="#">Increasing Prosperity<br> With Positive
             Thinking</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-2.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -349,9 +249,6 @@ link rel-->
           </div>
           <a class="slider__item-title title" href="#">Motivation Is The First<br> Step To Success</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-3.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -360,15 +257,6 @@ link rel-->
           <a class="slider__item-title title" href="#">Success Steps For Your<br> Personal Or
             Business<br> Life</a>
         </div>
-
-
-
-
-
-
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-1.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -377,9 +265,6 @@ link rel-->
           <a class="slider__item-title title" href="#">Increasing Prosperity<br> With Positive
             Thinking</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-2.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -387,9 +272,6 @@ link rel-->
           </div>
           <a class="slider__item-title title" href="#">Motivation Is The First<br> Step To Success</a>
         </div>
-
-
-
         <div class="slider__item">
           <img class="slider__item-img" src="images/blog-3.jpg" alt="blog images">
           <div class="slider_item-info">
@@ -398,34 +280,19 @@ link rel-->
           <a class="slider__item-title title" href="#">Success Steps For Your<br> Personal Or
             Business<br> Life</a>
         </div>
-
       </div>
     </div>
   </section>
 
-
-
-
-  <!--делаем футер и он сложный-->
-
   <footer class="footer">
     <div class="container">
-
-
-      <!--делаем обертку внутри футера-для логотипа, заголовков,2-х столбцов и рыжей кнопки-->
       <div class="footer__inner">
 
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
-
-        <!--Поскольку нам надо сделать заглавия, списки (инфа с каждаго столбца) 
-                          мы не можем просто так
-                          вставить в код- нам надо над каждым списком сделать обертку-->
         <div class="footer__menu">
-          <!--перед списком пилим заголовок-->
           <h6 class="footer__menu-title">Quick Links</h6>
-          <!--далее пилим список-->
           <ul class="footer__list">
             <li class="footer__menu-item">
               <a class="footer__menu-link" href="#">About Us</a>
@@ -441,15 +308,8 @@ link rel-->
             </li>
           </ul>
         </div>
-
-
-        <!--Поскольку нам надо сделать заглавия, списки (инфа с каждаго столбца) 
-                            мы не можем просто так
-                            вставить в код- нам надо над каждым списком сделать обертку-->
         <div class="footer__menu">
-          <!перед списком пилим заголовок>
             <h6 class="footer__menu-title">Legal Stuff</h6>
-            <!далее пилим список>
               <ul class="footer__list">
                 <li class="footer__menu-item">
                   <a class="footer__menu-link" href="#">Disclaimer</a>
@@ -465,13 +325,10 @@ link rel-->
                 </li>
               </ul>
         </div>
-
-        <!--пилим третью часть с формой для подписки на рассылку-->
         <form class="footer__form" action="#">
           <p class="footer__form-text">
             knowing you're always on the best energy deal.
           </p>
-          <!--пилим ячейку для ввода телефона-->
           <input class="footer__form-input" type="text" placeholder="Enter your phone Number">
           <button class="footer__form-btn" type="submit">Sign up Now</button>
         </form>
@@ -479,15 +336,9 @@ link rel-->
     </div>
   </footer>
 
-
-
-
-
-
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <!--для работы слайдера*-->
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
